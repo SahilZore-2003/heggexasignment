@@ -1,0 +1,23 @@
+@import "../../colors.scss";
+
+.breadcrum {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+
+    span {
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    svg {
+        color: $gray;
+    }
+
+    .last {
+        color: $dark-blue;
+        font-weight: 800;
+
+    }
+}

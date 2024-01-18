@@ -1,0 +1,85 @@
+@import "../../colors.scss";
+
+.quiz-container {
+    margin: 2rem 0;
+    display: grid;
+    place-items: center;
+
+    .quiz-content {
+        // border: 2px solid $dark-blue;
+        width: 100%;
+        max-width: 500px;
+
+        .tabs {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 1.2rem 0;
+
+            span {
+                padding-bottom: .5rem;
+                color: $gray;
+                font-weight: 500;
+                cursor: pointer;
+            }
+        }
+
+        .active-tab {
+            color: $dark-blue !important;
+            font-weight: bold !important;
+            border-bottom: 2px solid $dark-blue;
+        }
+
+        .board {
+            background: $gradient;
+            color: $white;
+            border-radius: 20px;
+            padding: 1rem;
+            height: 200px;
+
+            .icons {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 1rem;
+
+                svg {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .qustion {
+                display: grid;
+                place-items: center;
+                height: 60%;
+                font-size: 1.5rem;
+            }
+        }
+
+        .navigations {
+            user-select: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: $dark-blue;
+
+            .middle {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                svg {
+                    font-size: 2rem;
+                }
+
+                span {
+                    color: $black;
+                    font-weight: 800;
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+}

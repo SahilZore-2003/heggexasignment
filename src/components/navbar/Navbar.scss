@@ -1,0 +1,108 @@
+@import "../../colors.scss";
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+
+    .logo img {
+        object-fit: contain;
+        width: 200px;
+    }
+
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    a {
+        color: $gray;
+        transition: .2s;
+
+        &:hover {
+            color: $dark-blue;
+            font-weight: bold;
+        }
+    }
+
+    button {
+        background: $gradient;
+        color: $white;
+        border-radius: 20px;
+        padding: 10px 20px;
+        border: none;
+        outline: none;
+        width: 100px;
+
+    }
+}
+
+.nav-container .checkbox {
+    display: none;
+}
+
+.nav-container .hamburger-lines {
+
+    display: inline-block;
+    height: 26px;
+    width: 32px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+    display: none;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+    background: #0e2431;
+}
+
+
+.nav-container .hamburger-lines .line1 {
+    transform-origin: 0% 0%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+    transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+    transform-origin: 0% 100%;
+    transition: transform 0.4s ease-in-out;
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line1 {
+    transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line2 {
+    transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked~.hamburger-lines .line3 {
+    transform: rotate(-45deg);
+}
+
+@media (max-width:750px) {
+    nav {
+        .links {
+
+            a,
+            button {
+                display: none !important;
+            }
+
+        }
+    }
+
+    .nav-container .hamburger-lines .line {
+        display: inline-block;
+    }
+}
